@@ -1,31 +1,23 @@
+import Footer from './Footer'
+import Aside from './Aside'
+import FoodItems from './FoodItems'
 const Menu = () => {
   return (
-    <div className="flex-item">
-      <section className="grid-text">
-        <div className="text">
-          <div className="text-container">
+    <div className="container">
+      <div className="menu-container">
+        <Aside />
+        <div>
+          <div className="grid-text">
             <h1>SUSHI FOOD</h1>
           </div>
-        </div>
-      </section>
-
-      <div className="grid-container">
-        The div belows output from a javascript Array of the food items{' '}
-      </div>
-      <section className="loadMore">
-        <div className="load-more">
-          <div className="btn">
+          <FoodItems />
+          <div className="load-more">
             <button>Load more</button>
           </div>
         </div>
-      </section>
-      <section className="footer">
-        <footer>
-          <div>
-            <p className="copyright">Copyright © 2021 Sushi Restaurant</p>
-          </div>
-        </footer>
-      </section>
+      </div>
+
+      <Footer />
     </div>
   )
 }

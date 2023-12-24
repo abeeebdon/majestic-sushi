@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
-import Home from './Components/Home'
 import Cart from './Components/Cart'
-import Menu from './Components/Menu'
+import Menu from './MENU/Menu'
+import Home from './Home/Home'
+import CartPage from './MENU/CartPage'
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="/cart/:id" element={<CartPage />} />
+
         <Route path="menu" element={<Menu />} />
       </Routes>
     </div>

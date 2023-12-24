@@ -16,14 +16,43 @@ body {
 }
 // // STYLING THE HOMEPAGE OR LANDING PAGE
 // STARTS HERE
+.background-image {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-height: 100vh;
+  z-index: 1;
+}
 .home {
-  background-image: url('./Images/restaurant.jpg');
+  z-index: 3;
+  position: absolute;
+  top: 0;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  padding-top: 2rem;
+  padding-top: 4rem;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-direction: reverse;
+}
+
+// @keyframes example {
+//   from {
+//     background: url('./Images/bg1.jpg');
+//   }
+//   to {
+//     background: url('./Images/restaurant.jpg');
+//   }
+// }
+@keyframes examples {
+  from {
+    background-image: url('./Images/restaurant.jpg');
+  }
+  to {
+    background-image: url('./Images/bg1.jpg');
+  }
 }
 
 .home-text {

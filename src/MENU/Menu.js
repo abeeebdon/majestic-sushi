@@ -1,5 +1,5 @@
-import Footer from './Footer'
-import Aside from './Aside'
+import Footer from '../Components/Footer'
+import Aside from '../Aside/Aside'
 import FoodItems from './FoodItems'
 const Menu = () => {
   return (

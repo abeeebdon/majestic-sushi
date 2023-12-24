@@ -1,4 +1,4 @@
-import Aside from './Aside'
+import Aside from '../Aside/Aside'
 import Footer from './Footer'
 import Shop from './Shop'
 import Sub from './Sub'

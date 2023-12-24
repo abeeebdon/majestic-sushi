@@ -4,7 +4,7 @@ const FoodItems = () => {
   return (
     <div className="grid-container">
       {foodItems.map((foodItem) => {
-        return <FoodItem key="foodItem.id" foodItem={foodItem} />
+        return <FoodItem key={foodItem.id} foodItem={foodItem} />
       })}
     </div>
   )

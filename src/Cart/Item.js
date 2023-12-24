@@ -1,5 +1,12 @@
-const Item = ({ item }) => {
+const Item = ({
+  item,
+  handleCancel,
+  handleDecrease,
+  handleIncrease,
+  valueSet,
+}) => {
   const { name, price, src } = item
+
   return (
     <section className="food-type">
       <div className="food">
@@ -14,25 +21,23 @@ const Item = ({ item }) => {
         </div>
         <div className="math-wrap padding">
           <div className="add inline">
-            <button className="btn" id="btnIS">
+            <button className="btn" onClick={handleIncrease}>
               +
             </button>
           </div>
           <div className="result inline">
-            <span className="results" id="result">
-              0
-            </span>
+            <span className="results">{valueSet}</span>
           </div>
 
           <div className="decrease inline">
-            <button className="btn" id="btnDS">
+            <button className="btn" onClick={handleDecrease}>
               -
             </button>
           </div>
         </div>
         <div className="cancel-wrap padding">
           <div className="cancel">
-            <button className="btn" id="btnCancel">
+            <button className="btn" onClick={handleCancel}>
               x
             </button>
           </div>

@@ -1,4 +1,3 @@
-import Footer from '../Components/Footer'
 import Aside from '../Aside/Aside'
 import FoodItems from './FoodItems'
 const Menu = () => {
@@ -16,8 +15,6 @@ const Menu = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   )
 }

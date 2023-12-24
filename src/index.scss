@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 body {
   text-align: center;
@@ -10,6 +11,9 @@ body {
   font-size: 1.5rem;
 }
 
+a {
+  color: black;
+}
 #root {
   width: 100vw;
   height: 100vh;
@@ -46,14 +50,14 @@ body {
 //     background: url('./Images/restaurant.jpg');
 //   }
 // }
-@keyframes examples {
-  from {
-    background-image: url('./Images/restaurant.jpg');
-  }
-  to {
-    background-image: url('./Images/bg1.jpg');
-  }
-}
+// @keyframes examples {
+//   from {
+//     background-image: url('./Images/restaurant.jpg');
+//   }
+//   to {
+//     background-image: url('./Images/bg1.jpg');
+//   }
+// }
 
 .home-text {
   margin: 10px;
@@ -207,6 +211,27 @@ span {
   font-size: 1rem;
   padding: 1rem 0%;
 }
+.check-others {
+  background-color: red;
+  position: relative;
+  margin: 0.5rem;
+}
+.check-others-btn {
+  margin: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  text-align: center;
+  position: absolute;
+  right: 0%;
+}
+.check-others-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
 .food-type {
   width: 100%;
   display: flex;
@@ -287,11 +312,6 @@ span {
   cursor: pointer;
 }
 /* Styling the footer */
-footer {
-  width: 80vw;
-  margin-top: 20px;
-  padding-top: 10px;
-}
 
 .input {
   height: 60px;
@@ -321,9 +341,12 @@ footer {
 
 .footer {
   width: 80%;
+  padding: 0.7rem 0rem;
+  text-align: center;
   margin: 0 auto;
-  padding-left: 20px;
-  font-size: 14px;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0%;
 }
 // THE MENU PART
 // THE MENU PART
@@ -374,6 +397,35 @@ footer {
     font-size: 15px;
   }
 }
+.cart-page {
+  padding: 2rem;
+  h2 {
+    padding: 1rem;
+  }
+  .cart-img {
+    max-width: 250px;
+    width: 90%;
+    height: 250px;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+  p {
+    width: 90%;
+    max-width: 350px;
+    font-size: 1rem;
+  }
+  .cart-btn {
+    background-color: green;
+    color: white;
+    margin: 0.5rem 0.2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    margin: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .content {
     width: 95vw;

@@ -48,32 +48,7 @@ export const foodItems = [
     price: 20,
   },
 ]
-export const items = [
-  {
-    id: 1,
-    name: 'smashed avo',
-    price: 20,
-    src: 'smashed_avo.png',
-  },
-  {
-    id: 2,
-    name: 'Yin $ Yang',
-    price: 10,
-    src: 'Yin_and_Yang.png',
-  },
-  {
-    id: 3,
-    name: 'Pancakes',
-    price: 25,
-    src: 'Pancakes.png',
-  },
-  {
-    id: 4,
-    name: 'Rancheros(Tofu)',
-    price: 25,
-    src: 'rancheros_tofu.png',
-  },
-]
+
 export const icons = [
   {
     id: 1,

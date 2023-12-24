@@ -1,9 +1,7 @@
 const Footer = () => {
   return (
     <section className="footer">
-      <div>
-        <p className="copyright">Copyright © 2021 Sushi Restaurant</p>
-      </div>
+      <p className="copyright">Copyright © 2021 Sushi Restaurant</p>
     </section>
   )
 }

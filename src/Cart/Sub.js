@@ -1,12 +1,15 @@
-const Sub = () => {
+import { useEffect } from 'react'
+import { useGlobalContext } from '../Context/Context'
+
+const Sub = ({ totalPrice }) => {
   return (
     <div className="sub-wrapper">
       <div className="subtotal">
         <h1>Your Subtotal</h1>
         <div className="result">
           <p>
-            Subtotal
-            <span>$00.00</span>
+            Subtotal:
+            <span>{` $${totalPrice}.00`}</span>
           </p>
         </div>
         <div className="button">

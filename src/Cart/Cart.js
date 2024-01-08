@@ -1,40 +1,45 @@
 import { useState, useEffect } from 'react'
-import { foodItems } from '../Data'
-
 import Aside from '../Aside/Aside'
-import Shop from './Shop'
 import Sub from './Sub'
-
+import Item from './Item'
+import { foods } from '../Data'
 const Cart = () => {
-  const [items, setItems] = useState([])
-  const [valueSet, setValueSet] = useState(0)
+  const [items, setItems] = useState(foods)
+  const [totalPrice, setTotalPrice] = useState(0)
+  let price = 0
 
-  const handleCheckOthers = () => {
-    const loadItems = foodItems.filter((food) => food.id >= 5)
-    setItems(loadItems)
+  const handleIncrease = (id) => {
+    // const newItems = items.find((item) => item.id === id)
+    // newItems.amount = newItems.amount + 1
+    const newItems = items.map((item) => {
+      if (item.id === id) {
+        return { ...item, amount: item.amount + 1 }
+      }
+      return item
+    })
+    setItems(newItems)
+  }
+  const handleDecrease = (id) => {
+    const newItems = items.map((item) => {
+      if (item.id === id) {
+        return { ...item, amount: item.amount - 1 }
+      }
+      return item
+    })
+    setItems(newItems)
+  }
+  const handleCancel = (id) => {
+    const newItems = items.filter((item) => item.id !== id)
+    setItems(newItems)
   }
   useEffect(() => {
-    const loadItems = foodItems.filter((food) => food.id <= 4)
-    setItems(loadItems)
-  }, [])
+    items.map((item) => {
+      const newPrice = item.amount * item.price
+      price += newPrice
+    })
 
-  const handleIncrease = () => {
-    if (valueSet < 5) {
-      setValueSet(valueSet + 1)
-    } else {
-      setValueSet(5)
-    }
-  }
-  const handleDecrease = () => {
-    if (valueSet > 0) {
-      setValueSet(valueSet - 1)
-    } else {
-      setValueSet(0)
-    }
-  }
-  const handleCancel = () => {
-    setValueSet(0)
-  }
+    setTotalPrice(price)
+  }, [items])
 
   return (
     <section className="container">
@@ -42,21 +47,24 @@ const Cart = () => {
         <Aside />
         <div className="cart">
           <h1 className="cart-text inline">CART</h1>
-          <Shop
-            items={items}
-            handleCancel={handleCancel}
-            handleDecrease={handleDecrease}
-            handleIncrease={handleIncrease}
-            valueSet={valueSet}
-            setValueSet={setValueSet}
-          />
-          <div className="check-others">
-            <button className="check-others-btn" onClick={handleCheckOthers}>
-              Check Other Foods
-            </button>
+
+          <div className="shop">
+            {items.map((item) => {
+              return (
+                <Item
+                  key={item.id}
+                  item={item}
+                  setItems={setItems}
+                  items={items}
+                  handleCancel={handleCancel}
+                  handleDecrease={handleDecrease}
+                  handleIncrease={handleIncrease}
+                />
+              )
+            })}
           </div>
         </div>
-        <Sub />
+        <Sub totalPrice={totalPrice} />
       </div>
     </section>
   )

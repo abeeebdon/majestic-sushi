@@ -1,9 +1,9 @@
-import { foodItems } from '../Data'
+import { foods } from '../Data'
 import FoodItem from './FoodItem'
 const FoodItems = () => {
   return (
     <div className="grid-container">
-      {foodItems.map((foodItem) => {
+      {foods.map((foodItem) => {
         return <FoodItem key={foodItem.id} foodItem={foodItem} />
       })}
     </div>

@@ -7,8 +7,6 @@ import Footer from './Components/Footer'
 import { useGlobalContext } from './Context/Context'
 
 function App() {
-  const { valueSet } = useGlobalContext()
-  console.log(valueSet)
   return (
     <div>
       <Routes>

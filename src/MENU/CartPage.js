@@ -1,10 +1,10 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { foodItems } from '../Data'
+import { foods } from '../Data'
 
 const CartPage = () => {
   const { id } = useParams()
   const navigate = useNavigate()
-  const cart = foodItems.find((foodItem) => foodItem.id.toString() === id)
+  const cart = foods.find((foodItem) => foodItem.id.toString() === id)
   const { src, name } = cart
 
   const handleOrder = () => {

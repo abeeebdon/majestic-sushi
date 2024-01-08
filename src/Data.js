@@ -1,51 +1,59 @@
-export const foodItems = [
+export const foods = [
   {
     id: 1,
     name: 'Smashed Avo',
     src: './smashed_avo.png',
     price: 20,
+    amount: 0,
   },
   {
     id: 2,
     name: 'Yin and Yang',
     src: './Yin_and_yang.png',
-    price: 20,
+    price: 30,
+    amount: 0,
   },
   {
     id: 3,
     name: 'Pancakes',
     src: './Pancakes.png',
-    price: 20,
+    price: 40,
+    amount: 0,
   },
   {
     id: 4,
     name: 'Huevos Rancheros',
     src: './huevos_rancheros.png',
-    price: 20,
+    price: 50,
+    amount: 0,
   },
   {
     id: 5,
     name: 'Rancheros(tofu)',
     src: './rancheros_tofu.png',
-    price: 20,
+    price: 60,
+    amount: 0,
   },
   {
     id: 6,
     name: 'Breakkie Roll',
     src: './Breakkie_Roll.png',
-    price: 20,
+    price: 70,
+    amount: 0,
   },
   {
     id: 7,
     name: 'Breakkie Roll',
     src: './Breakkie_Roll.png',
-    price: 20,
+    price: 80,
+    amount: 0,
   },
   {
     id: 8,
     name: 'Burrito',
     src: './Burrito.png',
-    price: 20,
+    price: 90,
+    amount: 0,
   },
 ]
 

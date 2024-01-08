@@ -1,11 +1,7 @@
-const Item = ({
-  item,
-  handleCancel,
-  handleDecrease,
-  handleIncrease,
-  valueSet,
-}) => {
-  const { name, price, src } = item
+const Item = ({ item, handleIncrease, handleDecrease, handleCancel }) => {
+  const { name, price, src, id, amount } = item
+  // const activeItem = activeItems.find((item) => item.id === id)
+  // const amount = activeItem?.amount
 
   return (
     <section className="food-type">
@@ -21,26 +17,24 @@ const Item = ({
         </div>
         <div className="math-wrap padding">
           <div className="add inline">
-            <button className="btn" onClick={handleIncrease}>
+            <button className="btn" onClick={() => handleIncrease(id)}>
               +
             </button>
           </div>
           <div className="result inline">
-            <span className="results">{valueSet}</span>
+            <span className="results">{amount}</span>
           </div>
 
           <div className="decrease inline">
-            <button className="btn" onClick={handleDecrease}>
+            <button className="btn" onClick={() => handleDecrease(id)}>
               -
             </button>
           </div>
         </div>
         <div className="cancel-wrap padding">
-          <div className="cancel">
-            <button className="btn" onClick={handleCancel}>
-              x
-            </button>
-          </div>
+          <button className="btn" onClick={() => handleCancel(id)}>
+            x
+          </button>
         </div>
       </div>
     </section>

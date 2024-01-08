@@ -1,6 +1,3 @@
-import { useEffect } from 'react'
-import { useGlobalContext } from '../Context/Context'
-
 const Sub = ({ totalPrice }) => {
   return (
     <div className="sub-wrapper">

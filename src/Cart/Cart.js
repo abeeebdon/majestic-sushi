@@ -6,7 +6,6 @@ import { foods } from '../Data'
 const Cart = () => {
   const [items, setItems] = useState(foods)
   const [totalPrice, setTotalPrice] = useState(0)
-  let price = 0
 
   const handleIncrease = (id) => {
     // const newItems = items.find((item) => item.id === id)
@@ -33,6 +32,7 @@ const Cart = () => {
     setItems(newItems)
   }
   useEffect(() => {
+    let price = 0
     items.map((item) => {
       const newPrice = item.amount * item.price
       price += newPrice

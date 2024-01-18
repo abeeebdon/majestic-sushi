@@ -1,10 +1,17 @@
 import { icons } from '../Data'
-import Icon from './Icon'
+import { NavLink } from 'react-router-dom'
 const Aside = () => {
   return (
     <div className="icon-wrapper">
       {icons.map((icon) => {
-        return <Icon key={icon.id} icon={icon} />
+        const { path, src, id } = icon
+        return (
+          <div className="icon">
+            <NavLink to={path} className="icon-link">
+              <img src={src} alt={id} className="image" />
+            </NavLink>
+          </div>
+        )
       })}
     </div>
   )

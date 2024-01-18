@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client'
 import './index.scss'
 import App from './App'
 import AppContext from './Context/Context'
-import SimpleCalculator from './SimpleCalculator'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

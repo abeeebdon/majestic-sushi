@@ -4,11 +4,7 @@ import { BiChevronLeft } from 'react-icons/bi'
 import { useState, useEffect } from 'react'
 const Home = () => {
   const [index, setIndex] = useState(0)
-  const [background, setBackground] = useState([
-    './restaurant.jpg',
-    './BreakkieRoll.png',
-    './sushi2.jpg',
-  ])
+  const background = ['./restaurant.jpg', './BreakkieRoll.png', './sushi2.jpg']
 
   const handleLeft = () => {
     const newIndex = (index - 1 + background.length) % background.length
@@ -23,14 +19,14 @@ const Home = () => {
       const newIndex = (index + 1) % background.length
       setIndex(newIndex)
     }, 4000)
-  }, [index])
+  }, [index, background.length])
 
   return (
     <>
       <img
         src={background[index]}
         className="background-image"
-        alt="background-image"
+        alt={`background${index}`}
       />
       <section className="home">
         <div className="home-text">

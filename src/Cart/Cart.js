@@ -35,7 +35,7 @@ const Cart = () => {
     let price = 0
     items.map((item) => {
       const newPrice = item.amount * item.price
-      price += newPrice
+      return (price += newPrice)
     })
 
     setTotalPrice(price)

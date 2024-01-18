@@ -4,7 +4,6 @@ import Menu from './MENU/Menu'
 import Home from './Home/Home'
 import CartPage from './MENU/CartPage'
 import Footer from './Components/Footer'
-import { useGlobalContext } from './Context/Context'
 
 function App() {
   return (

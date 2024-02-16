@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import Aside from '../Aside/Aside'
+import Aside from '../../Aside/Aside'
 import Sub from './Sub'
 import Item from './Item'
-import { foods } from '../Data'
-const Cart = () => {
+import { foods } from '../../Data'
+const Index = () => {
   const [items, setItems] = useState(foods)
   const [totalPrice, setTotalPrice] = useState(0)
 
@@ -43,30 +43,28 @@ const Cart = () => {
 
   return (
     <section className="container">
-      <div className="flex-container">
-        <Aside />
-        <div className="cart">
-          <h1 className="cart-text inline">CART</h1>
+      <Aside />
+      <div className="cart">
+        <h1 className="cart-text">CART</h1>
 
-          <div className="shop">
-            {items.map((item) => {
-              return (
-                <Item
-                  key={item.id}
-                  item={item}
-                  setItems={setItems}
-                  items={items}
-                  handleCancel={handleCancel}
-                  handleDecrease={handleDecrease}
-                  handleIncrease={handleIncrease}
-                />
-              )
-            })}
-          </div>
+        <div className="shop">
+          {items.map((item) => {
+            return (
+              <Item
+                key={item.id}
+                item={item}
+                setItems={setItems}
+                items={items}
+                handleCancel={handleCancel}
+                handleDecrease={handleDecrease}
+                handleIncrease={handleIncrease}
+              />
+            )
+          })}
         </div>
-        <Sub totalPrice={totalPrice} />
       </div>
+      <Sub totalPrice={totalPrice} />
     </section>
   )
 }
-export default Cart
+export default Index

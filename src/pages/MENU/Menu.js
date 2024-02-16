@@ -1,4 +1,4 @@
-import Aside from '../Aside/Aside'
+import Aside from '../../Aside/Aside'
 import FoodItems from './FoodItems'
 const Menu = () => {
   return (

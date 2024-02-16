@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { foods } from '../Data'
+import { foods } from '../../Data'
 
 const CartPage = () => {
   const { id } = useParams()

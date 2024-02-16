@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
-import Cart from './Cart/Cart'
-import Menu from './MENU/Menu'
-import Home from './Home/Home'
-import CartPage from './MENU/CartPage'
+import Cart from './pages/Cart/Index'
+import Menu from './pages/MENU/Menu'
+import Home from './pages/Home/Home'
+import CartPage from './pages/MENU/CartPage'
 import Footer from './Components/Footer'
 
 function App() {

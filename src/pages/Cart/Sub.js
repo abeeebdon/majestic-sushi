@@ -9,7 +9,7 @@ const Sub = ({ totalPrice }) => {
             <span>{` $${totalPrice}.00`}</span>
           </p>
         </div>
-        <div className="button">
+        <div className="btn">
           <button>Confirm order</button>
         </div>
       </div>
@@ -19,7 +19,7 @@ const Sub = ({ totalPrice }) => {
         <div className="input">
           <input type="text" placeholder="enter promo code" />
         </div>
-        <div className="button">
+        <div className="btn">
           <button>Apply</button>
         </div>
       </div>

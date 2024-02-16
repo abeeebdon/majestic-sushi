@@ -1,4 +1,4 @@
-import { foods } from '../Data'
+import { foods } from '../../Data'
 import FoodItem from './FoodItem'
 const FoodItems = () => {
   return (

@@ -4,6 +4,9 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+:root {
+  color-scheme: light dark;
+}
 body {
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
@@ -417,5 +420,20 @@ span {
   }
   .link div {
     max-width: 200px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+  }
+  .container,
+  .shop,
+  .btn,
+  .results,
+  .subtotal {
+    background-color: black;
+  }
+  .icon-wrapper {
+    background-color: black;
   }
 }
